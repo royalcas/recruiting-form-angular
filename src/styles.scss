@@ -1,0 +1,36 @@
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+@import 'yuxi.material.scss';
+@import 'style/palette';
+/* You can add global styles to this file, and also import other style files */
+body {
+	 font-family: 'Poppins', sans-serif;
+	 background: url("./assets/Imagen formulario-01.jpg") no-repeat top center;
+	 background-position: 50% 50%;
+	 background-size: cover;
+	 min-height: 100vh;
+	 margin:0px;
+	 color: #fff;
+	 padding: 20px;
+
+}
+
+h1 strong {
+	color: map-get($map: $md-yuxiblue, $key: 900);
+}
+
+.container{
+	box-sizing: border-box;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container {
+    width: 400px;
+}
+
+.ngx-datatable{
+	color: #666;
+}

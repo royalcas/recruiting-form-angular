@@ -1,0 +1,18 @@
+<h1>Our
+	<br>
+	<strong>oportunities</strong>.</h1><br>
+	<mat-form-field class="full-width">
+			<input matInput placeholder="Buscar..." (keyup)='updateFilter($event)'>
+		  </mat-form-field>
+
+<ngx-datatable #table class='material'  [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+ [rowHeight]="'auto'" [limit]="10" [rows]='rows'>
+ <ngx-datatable-column name="Nombre Completo" prop="fullName"></ngx-datatable-column>
+ <ngx-datatable-column name="Celular" prop="phoneNumber"></ngx-datatable-column>
+ <ngx-datatable-column name="Email" prop="email"></ngx-datatable-column>
+ <ngx-datatable-column name="Firma"  prop="signatureImage">
+		<ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+			<img src="{{value}}" >
+			</ng-template>
+ </ngx-datatable-column>
+</ngx-datatable>

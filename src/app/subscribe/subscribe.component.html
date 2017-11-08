@@ -1,0 +1,42 @@
+<div class="container">
+<form class="example-form" [formGroup]="subscribeForm" (submit)="submit($event)">
+	<h1>Let's get
+		<br>in
+		<strong>touch</strong>.</h1>
+	<p class="subtitle">COMPÁRTENOS TUS DATOS</p>
+	<mat-form-field>
+		<input matInput placeholder="Nombre completo *" formControlName="fullName">
+	</mat-form-field>
+	<br>
+	<mat-form-field>
+		<input matInput type="email" #email="matInput" placeholder="Email *" formControlName="email" email>
+		<mat-hint [hidden]="email.pristine || email.valid">
+			<span [hidden]="email.errors?.required || !email.errors?.email">
+				No parece ser una dirección de email valida
+			</span>
+			<span [hidden]="!email.errors?.required">El Email es requerido.</span>
+		</mat-hint>
+	</mat-form-field>
+	<br>
+
+	<mat-form-field>
+		<input matInput placeholder="Celular *" type="phone" formControlName="phoneNumber">
+	</mat-form-field>
+	<br>
+	<label for="">Firma *</label>
+	<div class="signature-pad-container">
+		<signature-pad [options]="signaturePadOptions" id="signatureCanvas"></signature-pad>
+		<button mat-fab>
+			<mat-icon aria-label="Borrar firma" (click)="drawClear()">clear</mat-icon>
+		</button>
+	</div>
+	<br>
+	<br>
+
+	<mat-checkbox color="primary" formControlName="acceptTermsAndConditions"> Acepto términos y condiciones</mat-checkbox>
+	<br>
+	<button color="primary" mat-raised-button type="submit" [disabled]="!subscribeForm.valid || !subscribeForm.value.acceptTermsAndConditions">Enviar</button>
+
+	<br><br>
+</form>
+</div>
