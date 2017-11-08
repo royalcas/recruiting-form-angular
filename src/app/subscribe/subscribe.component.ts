@@ -15,15 +15,15 @@ export class SubscribeComponent implements OnInit {
 	signatureImage: any;
 
 	subscription: SubscribeForm = new SubscribeForm();
-	public signaturePadOptions: Object = {
+	signaturePadOptions: Object = {
 		'minWidth': 2,
 		'canvasWidth': 400,
 		'canvasHeight': 200
 	};
 
-	@ViewChild(SignaturePad) public signaturePad: SignaturePad;
+	@ViewChild(SignaturePad) signaturePad: SignaturePad;
 
-	constructor(private service: RecruitmentService, public snackBar: MatSnackBar) { }
+	constructor(public service: RecruitmentService, public snackBar: MatSnackBar) { }
 
 	ngOnInit(): void {
 		this.subscribeForm = new FormGroup({
