@@ -602,7 +602,7 @@ var SubscribeComponent = /** @class */ (function () {
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
     production: false,
-    apiUrl: 'http://localhost:59576/api/'
+    apiUrl: 'http://yuxi-recruiting.azurewebsites.net/api/recruitment/api/'
 };
 //# sourceMappingURL=environment.js.map
 
