@@ -15,8 +15,7 @@ const appRoutes: Routes = [
 	},
 	{
 		path: '',
-		redirectTo: '/subscribe',
-		pathMatch: 'full'
+		component: SubscribeComponent
 	}
 ];
 

@@ -47,8 +47,7 @@ var appRoutes = [
     },
     {
         path: '',
-        redirectTo: '/subscribe',
-        pathMatch: 'full'
+        component: __WEBPACK_IMPORTED_MODULE_1__subscribe_subscribe_component__["a" /* SubscribeComponent */]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
